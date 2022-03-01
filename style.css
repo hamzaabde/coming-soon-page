@@ -4,18 +4,141 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	font-family: 'Josefin Sans', 'Segoe UI', sans-serif;
 }
 
 :root {
 	--Desaturated-Red: hsl(0, 36%, 70%);
 	--Soft-Red: hsl(0, 93%, 68%);
 	--Dark-Grayish-Red: hsl(0, 6%, 24%);
+	--border: hsl(0, 93%, 68%, 0.2);
+	--border-focus: hsl(0, 93%, 68%, 0.5);
 
-	--gr-1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-	--gr-2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+	--gr-1: Linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--gr-2: Linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 	--sans: 'Josefin Sans', 'Segoe UI', 'Arial', sans-serif;
 }
 
-h1 {
+/* clearing default styles */
+input {
+	outline: none;
+	border: none;
+	background-color: inherit;
+}
+
+button {
+	outline: none;
+	border: none;
+	background-color: inherit;
+}
+
+img {
+	width: 100%;
+}
+
+/* logo */
+.logo {
+	margin-top: 6rem;
+}
+
+/* header */
+.header {
+	margin-top: 6rem;
+	font-size: 3.5rem;
+	letter-spacing: 1rem;
+	line-height: 4rem;
+	color: var(--Dark-Grayish-Red);
+}
+
+.header > span {
+	font-weight: 300;
+	color: var(--Desaturated-Red);
+	opacity: 0.9;
+}
+
+/* sub-header */
+.sub-header {
+	font-weight: bold;
+	line-height: 1.5rem;
+	margin: 3rem auto;
+	color: var(--Desaturated-Red);
+	letter-spacing: 1.5px;
+	opacity: 0.75;
+}
+
+/* input styling */
+.email-box {
+	width: 500px;
+}
+
+.box-wrapper {
+	display: flex;
+	align-items: center;
+	border-radius: 5rem;
+	width: 100%;
+	border: 3px solid var(--border);
+}
+
+.email-box input {
+	flex: 1 1 auto;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: 1.5rem 2rem;
+	padding-right: 1rem;
+}
+
+.email-box input::placeholder {
+	color: var(--Desaturated-Red);
+	opacity: 0.5;
+}
+
+.email-box button {
+	align-self: stretch;
+	padding: 0 3rem;
+	margin-left: 1rem;
+	border-radius: 5rem;
+	background: var(--gr-2);
+}
+
+.error-icon {
+	width: 1.8rem;
+	display: flex;
+	align-items: center;
+}
+
+/* layout styles */
+.layout {
+	display: flex;
+	align-items: stretch;
+	height: 100vh;
+}
+
+main {
+	flex: 1 1 55%;
+}
+
+main > div {
+	max-width: min-content;
+}
+
+.hero-img {
+	flex: 0 0 45%;
+	aspect-ratio: 1 / 2;
+	background-image: url(./images/hero-desktop.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.bg-pattern {
+	background-image: url(./images/bg-pattern-desktop.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hor-center {
+	display: flex;
+	justify-content: center;
 }

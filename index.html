@@ -5,13 +5,45 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
-		<title>Document</title>
+		<link
+			rel="shortcut icon"
+			href="./images/favicon-32x32.png"
+			type="image/png"
+		/>
+		<script src="./script.js" defer></script>
+		<title>BASE APPAREL</title>
 	</head>
 	<body>
-		<header>
-			<img src="./images/logo.svg" alt="" />
-		</header>
-
-		<main></main>
+		<div class="layout">
+			<main class="bg-pattern hor-center">
+				<div>
+					<div class="logo">
+						<img src="./images/logo.svg" alt="Base Apparel" />
+					</div>
+					<h1 class="header">
+						<span>WE'RE</span>
+						COMING SOON
+					</h1>
+					<p class="sub-header">
+						Hello fellow shoppers! We're currently building our new fashion
+						store. Add your email below to stay up-to-date with announcements
+						and our deals.
+					</p>
+					<div class="email-box">
+						<label for="email" class="box-wrapper">
+							<input type="email" id="email" placeholder="Email Address" />
+							<div class="error-icon">
+								<img src="./images/icon-error.svg" alt="error icon" />
+							</div>
+							<button>
+								<img src="./images/icon-arrow.svg" alt="arrow icon" />
+							</button>
+						</label>
+						<p class="error">Please provide a valid email</p>
+					</div>
+				</div>
+			</main>
+			<div class="hero-img"></div>
+		</div>
 	</body>
 </html>

@@ -9,6 +9,8 @@
 
 :root {
 	--Desaturated-Red: hsl(0, 36%, 70%);
+	--Desaturated-Red-b: hsl(0, 36%, 70%, 0.5);
+	--Desaturated-Red-s: hsl(0, 36%, 70%, 0.45);
 	--Soft-Red: hsl(0, 93%, 68%);
 	--Dark-Grayish-Red: hsl(0, 6%, 24%);
 	--border: hsl(0, 93%, 68%, 0.2);
@@ -20,125 +22,128 @@
 	--sans: 'Josefin Sans', 'Segoe UI', 'Arial', sans-serif;
 }
 
-/* clearing default styles */
+/* clearing defaults */
+button,
 input {
-	outline: none;
 	border: none;
+	outline: none;
 	background-color: inherit;
 }
 
-button {
-	outline: none;
-	border: none;
-	background-color: inherit;
-}
-
-img {
-	width: 100%;
+.layout {
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	background: var(--gr-1);
 }
 
 /* logo */
 .logo {
-	margin-top: 6rem;
+	/* padding: 1.5rem; */
+	align-self: stretch;
 }
 
-/* header */
-.header {
-	margin-top: 6rem;
-	font-size: 3.5rem;
+.logo img {
+	width: 100px;
+}
+
+/* hero section */
+.hero-img {
+	/* width: 375px; */
+	/* align-self: stretch; */
+	/* height: 250px; */
+	/* background-image: url('./images/hero-mobile.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; */
+}
+
+/* heading section */
+h1 {
+	font-size: 2.3rem;
+	font-weight: bold;
+	text-align: center;
 	letter-spacing: 1rem;
-	line-height: 4rem;
+	line-height: 2.8rem;
+	margin-top: 4.2rem;
+	margin-bottom: 0.8rem;
 	color: var(--Dark-Grayish-Red);
 }
 
-.header > span {
+h1 span {
 	font-weight: 300;
 	color: var(--Desaturated-Red);
-	opacity: 0.9;
 }
 
-/* sub-header */
-.sub-header {
-	font-weight: bold;
+/* sub-heading section */
+p {
+	font-size: 0.9rem;
+	font-weight: 500;
 	line-height: 1.5rem;
-	margin: 3rem auto;
+	text-align: center;
+	/* margin: 0 1.5rem; */
+	margin-bottom: 1.5rem;
 	color: var(--Desaturated-Red);
-	letter-spacing: 1.5px;
-	opacity: 0.75;
+	opacity: 0.7;
 }
 
-/* input styling */
-.email-box {
-	width: 500px;
+/* email section */
+
+.input-wrapper {
+	display: flex;
+	align-items: stretch;
 }
 
-.box-wrapper {
+.input-wrapper > label {
+	flex: 1 1 auto;
 	display: flex;
 	align-items: center;
-	border-radius: 5rem;
-	width: 100%;
-	border: 3px solid var(--border);
+	border: 2px solid var(--Desaturated-Red-b);
+	border-radius: 2rem;
+	padding: 0.6rem 1.5rem;
+	padding-right: 3rem;
 }
 
-.email-box input {
+.input-wrapper input {
 	flex: 1 1 auto;
 	font-weight: bold;
-	font-size: 1.2rem;
-	padding: 1.5rem 2rem;
-	padding-right: 1rem;
+	font-size: 1rem;
+	color: var(--Dark-Grayish-Red);
+
+	/* error icon */
+	/* background-image: url('./images/icon-error.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center right; */
 }
 
-.email-box input::placeholder {
+.input-wrapper .error {
+	visibility: hidden;
+}
+
+.input-wrapper button {
+	background: var(--gr-2);
+	padding: 0 1.8rem;
+	margin-left: -2.3rem;
+	border-radius: 2rem;
+	box-shadow: 0 1rem 1.5rem var(--Desaturated-Red-s);
+}
+
+.input-wrapper input::placeholder {
 	color: var(--Desaturated-Red);
 	opacity: 0.5;
 }
 
-.email-box button {
-	align-self: stretch;
-	padding: 0 3rem;
-	margin-left: 1rem;
-	border-radius: 5rem;
-	background: var(--gr-2);
+.error-msg {
+	display: block;
+	margin-top: 0.7rem;
+	margin-left: 1.5rem;
+	color: var(--Soft-Red);
+	visibility: hidden;
 }
 
-.error-icon {
-	width: 1.8rem;
-	display: flex;
-	align-items: center;
-}
-
-/* layout styles */
-.layout {
-	display: flex;
-	align-items: stretch;
-	height: 100vh;
-}
-
-main {
-	flex: 1 1 55%;
-}
-
-main > div {
-	max-width: min-content;
-}
-
-.hero-img {
-	flex: 0 0 45%;
-	aspect-ratio: 1 / 2;
-	background-image: url(./images/hero-desktop.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.bg-pattern {
-	background-image: url(./images/bg-pattern-desktop.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.hor-center {
-	display: flex;
-	justify-content: center;
+.input-wrapper .visible,
+.visible {
+	visibility: visible;
 }

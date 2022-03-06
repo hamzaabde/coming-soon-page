@@ -16,19 +16,19 @@ Users should be able to:
 
 ## Form valid desktop
 
-[](screenshots/desktop-form-valid.png)
+![](screenshots/desktop-form-valid.png)
 
 ## Form invalid desktop
 
-[](./screenshots/desktop-form-invalid.png)
+![](./screenshots/desktop-form-invalid.png)
 
 ## Form valid mobile
 
-[](./screenshots/mobile-form-valid.png)
+![](./screenshots/mobile-form-valid.png)
 
 ## Form invalid mobile
 
-[](./screenshots/mobile-form-invalid.png)
+![](./screenshots/mobile-form-invalid.png)
 
 ### Links
 
